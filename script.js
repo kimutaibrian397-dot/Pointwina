@@ -3,16 +3,21 @@ let balance = 10000;
 let selectedGame = "";
 let selectedOdds = 0;
 
-// Update balance on the screen
+// ==========================
+// UPDATE BALANCE
+// ==========================
 function updateBalance() {
   const balanceElement = document.getElementById("balance");
 
   if (balanceElement) {
-    balanceElement.innerText = balance.toLocaleString() + " POINTS";
+    balanceElement.innerText =
+      balance.toLocaleString() + " POINTS";
   }
 }
 
-// Add virtual points
+// ==========================
+// ADD VIRTUAL POINTS
+// ==========================
 function addPoints() {
   balance += 1000;
   updateBalance();
@@ -25,7 +30,9 @@ function addPoints() {
   );
 }
 
-// Select a football bet
+// ==========================
+// SELECT BET
+// ==========================
 function placeDemoBet(game) {
   selectedGame = game;
 
@@ -37,14 +44,25 @@ function placeDemoBet(game) {
     selectedOdds = 4.20;
   }
 
-  document.getElementById("selectedBet").innerText =
-    "Arsenal vs Tottenham\n" +
-    game + " @ " + selectedOdds;
+  const selectedBet = document.getElementById("selectedBet");
+  const betSlip = document.getElementById("betSlip");
 
-  document.getElementById("betSlip").style.display = "block";
+  if (selectedBet) {
+    selectedBet.innerText =
+      "Arsenal vs Tottenham\n" +
+      game +
+      " @ " +
+      selectedOdds;
+  }
+
+  if (betSlip) {
+    betSlip.style.display = "block";
+  }
 }
 
-// Confirm the bet
+// ==========================
+// CONFIRM BET
+// ==========================
 function confirmBet() {
   const amount = 100;
 
@@ -64,9 +82,13 @@ function confirmBet() {
   alert(
     "🎮 BET PLACED!\n\n" +
     "Match: Arsenal vs Tottenham\n" +
-    "Selection: " + selectedGame + "\n" +
-    "Odds: " + selectedOdds + "\n" +
-    "Stake: " + amount + " virtual points\n\n" +
+    "Selection: " +
+    selectedGame +
+    "\n" +
+    "Odds: " +
+    selectedOdds +
+    "\n" +
+    "Stake: 100 virtual points\n\n" +
     "Remaining balance: " +
     balance.toLocaleString() +
     " POINTS"
@@ -75,10 +97,26 @@ function confirmBet() {
   closeBetSlip();
 }
 
-// Close Bet Slip
+// ==========================
+// CLOSE BET SLIP
+// ==========================
 function closeBetSlip() {
-  document.getElementById("betSlip").style.display = "none";
+  const betSlip = document.getElementById("betSlip");
+
+  if (betSlip) {
+    betSlip.style.display = "none";
+  }
 }
 
-// Run when page loads
-updateBalance();
+// ==========================
+// PAGE LOAD
+// ==========================
+document.addEventListener("DOMContentLoaded", function () {
+  updateBalance();
+
+  const betSlip = document.getElementById("betSlip");
+
+  if (betSlip) {
+    betSlip.style.display = "none";
+  }
+});
