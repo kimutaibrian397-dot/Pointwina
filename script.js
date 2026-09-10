@@ -41,6 +41,35 @@ function placeDemoBet(game) {
 
   document.getElementById("betSlip").style.display = "block";
 }
+  function confirmBet() {
+  const amount = 100;
+
+  if (!selectedGame) {
+    alert("Please select a bet first.");
+    return;
+  }
+
+  if (balance < amount) {
+    alert("❌ Not enough virtual points.");
+    return;
+  }
+
+  balance -= amount;
+  updateBalance();
+
+  alert(
+    "🎮 BET PLACED!\n\n" +
+    "Match: Arsenal vs Tottenham\n" +
+    "Selection: " + selectedGame + "\n" +
+    "Odds: " + selectedOdds + "\n" +
+    "Stake: " + amount + " virtual points\n\n" +
+    "Remaining balance: " +
+    balance.toLocaleString() +
+    " POINTS"
+  );
+
+  closeBetSlip();
+  }
 function showPromotions() {
   alert(
     "🎁 POINTWINA PROMOTIONS\n\n" +
