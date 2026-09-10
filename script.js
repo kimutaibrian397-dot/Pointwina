@@ -1,16 +1,18 @@
-// POINTWINA Demo
-// Virtual points only
-
 let balance = 10000;
 
+function updateBalance() {
+  document.getElementById("balance").textContent =
+    balance.toLocaleString() + " POINTS";
+}
+
 function showBalance() {
-  alert("Your virtual balance is " + balance + " POINTS");
+  alert("Your virtual balance is " + balance.toLocaleString() + " POINTS");
 }
 
 function addPoints() {
   balance += 1000;
+  updateBalance();
   alert("1,000 virtual points added!");
-  showBalance();
 }
 
 function placeDemoBet() {
@@ -18,9 +20,11 @@ function placeDemoBet() {
 
   if (balance >= amount) {
     balance -= amount;
+    updateBalance();
     alert("Demo prediction placed!\n100 virtual points used.");
-    showBalance();
   } else {
     alert("Not enough virtual points.");
   }
 }
+
+updateBalance();
