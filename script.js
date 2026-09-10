@@ -19,8 +19,6 @@ function addPoints() {
 
   alert("✅ 1,000 virtual points added!\n\nNew balance: " +
     balance.toLocaleString() + " POINTS");
-}
-
 function placeDemoBet(game) {
   const amount = 100;
 
@@ -33,14 +31,15 @@ function placeDemoBet(game) {
   updateBalance();
 
   alert(
-    "🎮 " + game + " DEMO\n\n" +
-    "100 virtual points used.\n" +
+    "🎮 BET PLACED!\n\n" +
+    "Match: Arsenal vs Tottenham\n" +
+    "Selection: " + game + "\n" +
+    "Stake: 100 virtual points\n\n" +
     "Remaining balance: " +
     balance.toLocaleString() +
     " POINTS"
   );
 }
-
 function showPromotions() {
   alert(
     "🎁 POINTWINA PROMOTIONS\n\n" +
