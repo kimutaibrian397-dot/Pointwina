@@ -6,25 +6,60 @@ function updateBalance() {
 }
 
 function showBalance() {
-  alert("Your virtual balance is " + balance.toLocaleString() + " POINTS");
+  alert(
+    "💰 MY WALLET\n\nVirtual Balance: " +
+    balance.toLocaleString() +
+    " POINTS"
+  );
 }
 
 function addPoints() {
   balance += 1000;
   updateBalance();
-  alert("1,000 virtual points added!");
+
+  alert("✅ 1,000 virtual points added!\n\nNew balance: " +
+    balance.toLocaleString() + " POINTS");
 }
 
-function placeDemoBet() {
+function placeDemoBet(game) {
   const amount = 100;
 
-  if (balance >= amount) {
-    balance -= amount;
-    updateBalance();
-    alert("Demo prediction placed!\n100 virtual points used.");
-  } else {
-    alert("Not enough virtual points.");
+  if (balance < amount) {
+    alert("❌ Not enough virtual points.");
+    return;
   }
+
+  balance -= amount;
+  updateBalance();
+
+  alert(
+    "🎮 " + game + " DEMO\n\n" +
+    "100 virtual points used.\n" +
+    "Remaining balance: " +
+    balance.toLocaleString() +
+    " POINTS"
+  );
+}
+
+function showPromotions() {
+  alert(
+    "🎁 POINTWINA PROMOTIONS\n\n" +
+    "Coming soon!\n\n" +
+    "• Daily demo rewards\n" +
+    "• Prediction bonuses\n" +
+    "• Spin & Win rewards"
+  );
+}
+
+function showAccount() {
+  alert(
+    "👤 MY ACCOUNT\n\n" +
+    "POINTWINA Demo Account\n" +
+    "Status: Active\n" +
+    "Balance: " +
+    balance.toLocaleString() +
+    " POINTS"
+  );
 }
 
 updateBalance();
