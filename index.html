@@ -27,16 +27,31 @@
 
       <div class="cards">
 
-        <button class="card" onclick="placeDemoBet('Football')">
-          <div class="football-matches">
-  <h3>⚽ Today's Matches</h3>
-  <p>Arsenal vs Tottenham — 1.85 | 3.40 | 4.20</p>
-  <button onclick="placeDemoBet('Arsenal Win')">Arsenal Win</button>
-          </div>
-          <span>⚽</span>
-          Football
-          <small>Predictions</small>
-        </button>
+        <div class="card">
+  <div class="football-matches">
+    <h3>⚽ Today's Matches</h3>
+
+    <p>Arsenal vs Tottenham</p>
+
+    <div class="bet-options">
+      <button onclick="placeDemoBet('Arsenal Win')">
+        Arsenal <small>1.85</small>
+      </button>
+
+      <button onclick="placeDemoBet('Draw')">
+        Draw <small>3.40</small>
+      </button>
+
+      <button onclick="placeDemoBet('Tottenham Win')">
+        Tottenham <small>4.20</small>
+      </button>
+    </div>
+  </div>
+
+  <span>⚽</span>
+  Football
+  <small>Predictions</small>
+        </div>
 
         <button class="card" onclick="placeDemoBet('Aviator')">
           <span>✈️</span>
