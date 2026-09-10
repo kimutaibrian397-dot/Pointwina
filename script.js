@@ -17,8 +17,10 @@ function addPoints() {
   balance += 1000;
   updateBalance();
 
-  alert("✅ 1,000 virtual points added!\n\nNew balance: " +
+    alert("✅ 1,000 virtual points added!\n\nNew balance: " +
     balance.toLocaleString() + " POINTS");
+}
+
 function placeDemoBet(game) {
   const amount = 100;
 
