@@ -19,28 +19,27 @@ function addPoints() {
 
     alert("✅ 1,000 virtual points added!\n\nNew balance: " +
     balance.toLocaleString() + " POINTS");
-}
+
+
+let selectedGame = "";
+let selectedOdds = 0;
 
 function placeDemoBet(game) {
-  const amount = 100;
+  selectedGame = game;
 
-  if (balance < amount) {
-    alert("❌ Not enough virtual points.");
-    return;
+  if (game === "Arsenal Win") {
+    selectedOdds = 1.85;
+  } else if (game === "Draw") {
+    selectedOdds = 3.40;
+  } else if (game === "Tottenham Win") {
+    selectedOdds = 4.20;
   }
 
-  balance -= amount;
-  updateBalance();
+  document.getElementById("selectedBet").innerText =
+    "Arsenal vs Tottenham\n" +
+    game + " @ " + selectedOdds;
 
-  alert(
-    "🎮 BET PLACED!\n\n" +
-    "Match: Arsenal vs Tottenham\n" +
-    "Selection: " + game + "\n" +
-    "Stake: 100 virtual points\n\n" +
-    "Remaining balance: " +
-    balance.toLocaleString() +
-    " POINTS"
-  );
+  document.getElementById("betSlip").style.display = "block";
 }
 function showPromotions() {
   alert(
