@@ -70,6 +70,9 @@ function placeDemoBet(game) {
 
   closeBetSlip();
   }
+  function closeBetSlip() {
+  document.getElementById("betSlip").style.display = "none";
+  }
 function showPromotions() {
   alert(
     "🎁 POINTWINA PROMOTIONS\n\n" +
