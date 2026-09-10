@@ -6,17 +6,7 @@
   <title>POINTWINA</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<!-- BET SLIP -->
-<div id="betSlip" class="bet-slip">
-  <h3>🧾 Bet Slip</h3>
 
-  <p id="selectedBet">No selection yet.</p>
-
-  <p>Stake: <strong>100 virtual points</strong></p>
-
-  <button onclick="confirmBet()">Place Bet</button>
-  <button onclick="closeBetSlip()">Cancel</button>
-</div>
 <body>
 
   <header>
@@ -38,29 +28,31 @@
       <div class="cards">
 
         <div class="card">
-  <div class="football-matches">
-    <h3>⚽ Today's Matches</h3>
+          <div class="football-matches">
+            <h3>⚽ Today's Matches</h3>
 
-    <p>Arsenal vs Tottenham</p>
+            <p>Arsenal vs Tottenham</p>
 
-    <div class="bet-options">
-      <button onclick="placeDemoBet('Arsenal Win')">
-        Arsenal <small>1.85</small>
-      </button>
+            <div class="bet-options">
 
-      <button onclick="placeDemoBet('Draw')">
-        Draw <small>3.40</small>
-      </button>
+              <button onclick="placeDemoBet('Arsenal Win')">
+                Arsenal <small>1.85</small>
+              </button>
 
-      <button onclick="placeDemoBet('Tottenham Win')">
-        Tottenham <small>4.20</small>
-      </button>
-    </div>
-  </div>
+              <button onclick="placeDemoBet('Draw')">
+                Draw <small>3.40</small>
+              </button>
 
-  <span>⚽</span>
-  Football
-  <small>Predictions</small>
+              <button onclick="placeDemoBet('Tottenham Win')">
+                Tottenham <small>4.20</small>
+              </button>
+
+            </div>
+          </div>
+
+          <span>⚽</span>
+          Football
+          <small>Predictions</small>
         </div>
 
         <button class="card" onclick="placeDemoBet('Aviator')">
@@ -108,7 +100,31 @@
     Virtual points only
   </footer>
 
+
+  <!-- BET SLIP -->
+  <div id="betSlip" class="bet-slip" style="display: none;">
+
+    <h3>🧾 Bet Slip</h3>
+
+    <p id="selectedBet">No selection yet.</p>
+
+    <p>
+      Stake:
+      <strong>100 virtual points</strong>
+    </p>
+
+    <button type="button" onclick="confirmBet()">
+      Place Bet
+    </button>
+
+    <button type="button" onclick="closeBetSlip()">
+      Cancel
+    </button>
+
+  </div>
+
+
   <script src="script.js"></script>
 
 </body>
-</html>
+                            </html>
