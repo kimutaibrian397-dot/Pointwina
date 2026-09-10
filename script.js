@@ -1,29 +1,31 @@
 let balance = 10000;
 
+let selectedGame = "";
+let selectedOdds = 0;
+
+// Update balance on the screen
 function updateBalance() {
-  document.getElementById("balance").textContent =
-    balance.toLocaleString() + " POINTS";
+  const balanceElement = document.getElementById("balance");
+
+  if (balanceElement) {
+    balanceElement.innerText = balance.toLocaleString() + " POINTS";
+  }
 }
 
-function showBalance() {
+// Add virtual points
+function addPoints() {
+  balance += 1000;
+  updateBalance();
+
   alert(
-    "💰 MY WALLET\n\nVirtual Balance: " +
+    "✅ 1,000 virtual points added!\n\n" +
+    "New balance: " +
     balance.toLocaleString() +
     " POINTS"
   );
 }
 
-function addPoints() {
-  balance += 1000;
-  updateBalance();
-
-    alert("✅ 1,000 virtual points added!\n\nNew balance: " +
-    balance.toLocaleString() + " POINTS");
-
-
-let selectedGame = "";
-let selectedOdds = 0;
-
+// Select a football bet
 function placeDemoBet(game) {
   selectedGame = game;
 
@@ -41,7 +43,9 @@ function placeDemoBet(game) {
 
   document.getElementById("betSlip").style.display = "block";
 }
-  function confirmBet() {
+
+// Confirm the bet
+function confirmBet() {
   const amount = 100;
 
   if (!selectedGame) {
@@ -69,29 +73,12 @@ function placeDemoBet(game) {
   );
 
   closeBetSlip();
-  }
-  function closeBetSlip() {
+}
+
+// Close Bet Slip
+function closeBetSlip() {
   document.getElementById("betSlip").style.display = "none";
-  }
-function showPromotions() {
-  alert(
-    "🎁 POINTWINA PROMOTIONS\n\n" +
-    "Coming soon!\n\n" +
-    "• Daily demo rewards\n" +
-    "• Prediction bonuses\n" +
-    "• Spin & Win rewards"
-  );
 }
 
-function showAccount() {
-  alert(
-    "👤 MY ACCOUNT\n\n" +
-    "POINTWINA Demo Account\n" +
-    "Status: Active\n" +
-    "Balance: " +
-    balance.toLocaleString() +
-    " POINTS"
-  );
-}
-
+// Run when page loads
 updateBalance();
