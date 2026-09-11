@@ -1,139 +1,140 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 
+
 body {
-  font-family: Arial, sans-serif;
-  background: #080808;
-  color: #ffffff;
-  min-height: 100vh;
+font-family: Arial, sans-serif;
+background: #080808;
+color: #ffffff;
+min-height: 100vh;
 }
 
 header {
-  text-align: center;
-  padding: 25px 15px;
-  background: #111111;
-  border-bottom: 1px solid #2b2b2b;
+text-align: center;
+padding: 25px 15px;
+background: #111111;
+border-bottom: 1px solid #2b2b2b;
 }
 
 .logo {
-  font-size: 32px;
-  font-weight: 900;
-  color: #ffd000;
-  letter-spacing: 2px;
+font-size: 32px;
+font-weight: 900;
+color: #ffd000;
+letter-spacing: 2px;
 }
 
 header p {
-  margin-top: 6px;
-  color: #999999;
+margin-top: 6px;
+color: #999999;
 }
 
 main {
-  max-width: 600px;
-  margin: auto;
+max-width: 600px;
+margin: auto;
 }
 
 .balance {
-  margin: 20px;
-  padding: 22px;
-  background: linear-gradient(145deg, #191919, #101010);
-  border: 1px solid #333333;
-  border-radius: 18px;
-  text-align: center;
+margin: 20px;
+padding: 22px;
+background: linear-gradient(145deg, #191919, #101010);
+border: 1px solid #333333;
+border-radius: 18px;
+text-align: center;
 }
 
 .balance p {
-  color: #999999;
+color: #999999;
 }
 
 .balance h2 {
-  margin: 10px 0 18px;
-  color: #ffd000;
-  font-size: 25px;
+margin: 10px 0 18px;
+color: #ffd000;
+font-size: 25px;
 }
 
 .balance button {
-  border: none;
-  padding: 12px 20px;
-  border-radius: 10px;
-  background: #ffd000;
-  color: #000000;
-  font-weight: bold;
-  cursor: pointer;
+border: none;
+padding: 12px 20px;
+border-radius: 10px;
+background: #ffd000;
+color: #000000;
+font-weight: bold;
+cursor: pointer;
 }
 
 .section {
-  padding: 10px 20px 20px;
+padding: 10px 20px 20px;
 }
 
 .section h2 {
-  margin-bottom: 15px;
-  font-size: 21px;
+margin-bottom: 15px;
+font-size: 21px;
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
 }
 
 .card {
-  min-height: 140px;
-  border: 1px solid #303030;
-  border-radius: 17px;
-  background: #151515;
-  color: #ffffff;
-  cursor: pointer;
-  transition: 0.2s;
+min-height: 140px;
+border: 1px solid #303030;
+border-radius: 17px;
+background: #151515;
+color: #ffffff;
+cursor: pointer;
+transition: 0.2s;
 }
 
 .card:hover {
-  border-color: #ffd000;
-  transform: translateY(-2px);
+border-color: #ffd000;
+transform: translateY(-2px);
 }
 
 .card span {
-  display: block;
-  font-size: 38px;
-  margin-bottom: 10px;
+display: block;
+font-size: 38px;
+margin-bottom: 10px;
 }
 
 .card small {
-  display: block;
-  margin-top: 7px;
-  color: #888888;
+display: block;
+margin-top: 7px;
+color: #888888;
 }
 
 .button {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 16px;
-  border-radius: 12px;
-  background: #151515;
-  border: 1px solid #303030;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
+display: block;
+width: 100%;
+margin: 10px 0;
+padding: 16px;
+border-radius: 12px;
+background: #151515;
+border: 1px solid #303030;
+color: #ffffff;
+text-decoration: none;
+font-weight: bold;
+text-align: center;
 }
 
 .button:hover {
-  border-color: #ffd000;
-  color: #ffd000;
+border-color: #ffd000;
+color: #ffd000;
 }
 
 footer {
-  padding: 25px;
-  text-align: center;
-  color: #666666;
-  font-size: 13px;
+padding: 25px;
+text-align: center;
+color: #666666;
+font-size: 13px;
 }
 
 @media (max-width: 400px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
+.cards {
+grid-template-columns: 1fr;
 }
+  }
