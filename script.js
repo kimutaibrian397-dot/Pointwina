@@ -216,3 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
     betSlip.style.display = "none";
   }
 });
+
+function testWin() {
+  settleDemoBet("Home");
+}
