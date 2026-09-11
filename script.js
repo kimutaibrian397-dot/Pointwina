@@ -199,3 +199,20 @@ document.addEventListener("DOMContentLoaded", function () {
     betSlip.style.display = "none";
   }
 });
+
+  selectedGame = "";
+  selectedOdds = 0;
+}
+
+// ==========================
+// PAGE LOAD
+// ==========================
+document.addEventListener("DOMContentLoaded", function () {
+  updateBalance();
+
+  const betSlip = document.getElementById("betSlip");
+
+  if (betSlip) {
+    betSlip.style.display = "none";
+  }
+});
