@@ -27,33 +27,147 @@
 
       <div class="cards">
 
+        <!-- ==========================
+             FOOTBALL
+        =========================== -->
+
         <div class="card">
+
           <div class="football-matches">
+
             <h3>⚽ Today's Matches</h3>
 
-            <p>Arsenal vs Tottenham</p>
+            <div id="footballMatches">
 
-            <div class="bet-options">
+              <!-- ARSENAL VS TOTTENHAM -->
+              <div class="match">
 
-              <button onclick="placeDemoBet('Arsenal Win')">
-                Arsenal <small>1.85</small>
-              </button>
+                <p>
+                  <strong>Arsenal vs Tottenham</strong>
+                </p>
 
-              <button onclick="placeDemoBet('Draw')">
-                Draw <small>3.40</small>
-              </button>
+                <div class="bet-options">
 
-              <button onclick="placeDemoBet('Tottenham Win')">
-                Tottenham <small>4.20</small>
-              </button>
+                  <button onclick="placeFootballBet(0, 'Arsenal Win', 1.85)">
+                    Arsenal
+                    <small>1.85</small>
+                  </button>
+
+                  <button onclick="placeFootballBet(0, 'Draw', 3.40)">
+                    Draw
+                    <small>3.40</small>
+                  </button>
+
+                  <button onclick="placeFootballBet(0, 'Tottenham Win', 4.20)">
+                    Tottenham
+                    <small>4.20</small>
+                  </button>
+
+                </div>
+
+              </div>
+
+
+              <!-- MANCHESTER UNITED VS CHELSEA -->
+              <div class="match">
+
+                <p>
+                  <strong>Manchester United vs Chelsea</strong>
+                </p>
+
+                <div class="bet-options">
+
+                  <button onclick="placeFootballBet(1, 'Manchester United Win', 2.10)">
+                    Man United
+                    <small>2.10</small>
+                  </button>
+
+                  <button onclick="placeFootballBet(1, 'Draw', 3.30)">
+                    Draw
+                    <small>3.30</small>
+                  </button>
+
+                  <button onclick="placeFootballBet(1, 'Chelsea Win', 3.20)">
+                    Chelsea
+                    <small>3.20</small>
+                  </button>
+
+                </div>
+
+              </div>
+
+
+              <!-- LIVERPOOL VS MANCHESTER CITY -->
+              <div class="match">
+
+                <p>
+                  <strong>Liverpool vs Manchester City</strong>
+                </p>
+
+                <div class="bet-options">
+
+                  <button onclick="placeFootballBet(2, 'Liverpool Win', 2.40)">
+                    Liverpool
+                    <small>2.40</small>
+                  </button>
+
+                  <button onclick="placeFootballBet(2, 'Draw', 3.50)">
+                    Draw
+                    <small>3.50</small>
+                  </button>
+
+                  <button onclick="placeFootballBet(2, 'Manchester City Win', 2.70)">
+                    Man City
+                    <small>2.70</small>
+                  </button>
+
+                </div>
+
+              </div>
+
+
+              <!-- BARCELONA VS REAL MADRID -->
+              <div class="match">
+
+                <p>
+                  <strong>Barcelona vs Real Madrid</strong>
+                </p>
+
+                <div class="bet-options">
+
+                  <button onclick="placeFootballBet(3, 'Barcelona Win', 2.30)">
+                    Barcelona
+                    <small>2.30</small>
+                  </button>
+
+                  <button onclick="placeFootballBet(3, 'Draw', 3.60)">
+                    Draw
+                    <small>3.60</small>
+                  </button>
+
+                  <button onclick="placeFootballBet(3, 'Real Madrid Win', 2.80)">
+                    Real Madrid
+                    <small>2.80</small>
+                  </button>
+
+                </div>
+
+              </div>
 
             </div>
+
           </div>
 
           <span>⚽</span>
           Football
           <small>Predictions</small>
+
         </div>
+
+
+        <!-- ==========================
+             AVIATOR
+        =========================== -->
 
         <button class="card" onclick="placeDemoBet('Aviator')">
           <span>✈️</span>
@@ -61,11 +175,21 @@
           <small>Demo Game</small>
         </button>
 
+
+        <!-- ==========================
+             CASINO
+        =========================== -->
+
         <button class="card" onclick="placeDemoBet('Casino')">
           <span>🎰</span>
           Casino
           <small>Demo Games</small>
         </button>
+
+
+        <!-- ==========================
+             SPIN & WIN
+        =========================== -->
 
         <button class="card" onclick="placeDemoBet('Spin & Win')">
           <span>🎯</span>
@@ -74,9 +198,16 @@
         </button>
 
       </div>
+
     </section>
 
+
+    <!-- ==========================
+         QUICK ACCESS
+    =========================== -->
+
     <section class="section">
+
       <h2>Quick Access</h2>
 
       <a class="button" href="#" onclick="showBalance(); return false;">
@@ -90,9 +221,15 @@
       <a class="button" href="#" onclick="alert('Account section coming soon!'); return false;">
         👤 My Account
       </a>
+
     </section>
 
   </main>
+
+
+  <!-- ==========================
+       FOOTER
+  =========================== -->
 
   <footer>
     POINTWINA Demo
@@ -101,12 +238,17 @@
   </footer>
 
 
-  <!-- BET SLIP -->
+  <!-- ==========================
+       BET SLIP
+  =========================== -->
+
   <div id="betSlip" class="bet-slip" style="display: none;">
 
     <h3>🧾 Bet Slip</h3>
 
-    <p id="selectedBet">No selection yet.</p>
+    <p id="selectedBet">
+      No selection yet.
+    </p>
 
     <p>
       Stake:
@@ -124,7 +266,11 @@
   </div>
 
 
+  <!-- ==========================
+       JAVASCRIPT
+  =========================== -->
+
   <script src="script.js"></script>
 
 </body>
-                            </html>
+</html>
